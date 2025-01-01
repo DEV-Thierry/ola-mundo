@@ -6,13 +6,19 @@ export const Menu = () => {
         <header>
             <nav className={style.navegacao}>
                 <NavLink to ="/" className = {({isActive}) => 
-                     isActive ? `${style.linkDestacado} ${style.link}` : style.link
+                    `
+                        ${style.link}
+                        ${isActive ? style.linkDestacado : ""}
+                    `
                 }>
                     Inicio
                 </NavLink>
 
                 <NavLink to ="/sobremim" className = {({isActive, isPending}) => 
-                   isActive ? `${style.linkDestacado} ${style.link}` : style.link
+                    `
+                        ${style.link}
+                        ${isActive ? style.linkDestacado : ""}
+                    `
                 }>
                     Sobre Mim 
                 </NavLink>
